@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tic Tac Toe </title>
+        <link rel="stylesheet" href="tictactoe.css" />
+    </head>
+    <body>
+        <h1>Tic Tac Toe</h1>
+        <hr class="divider" />
+
+        <!-- Setup Configuration Section -->
+        <section id="setup-section" class="setup-section">
+            <div class="mode-selection">
+                <button id="singlePlayerBtn" class="btn mode-btn active">Single Player</button>
+                <button id="twoPlayerBtn" class="btn mode-btn">Two Player</button>
+            </div>
+
+            <!-- Round Count Selector -->
+            <div class="round-selector">
+                <label for="maxRoundsSelect">Choose Rounds to Win Match:</label>
+                <select id="maxRoundsSelect" class="dropdown">
+                    <option value="1">Best of 1</option>
+                    <option value="3" selected>Best of 3</option>
+                    <option value="5">Best of 5</option>
+                </select>
+            </div>
+
+            <button id="start-game-btn" class="btn start-btn">Start Game</button>
+        </section>
+
+        <!-- Main Game Area -->
+        <div id="game-area" class="hidden">
+            <!-- Player Input Controls -->
+            <section class="player-inputs">
+                <div class="input-group">
+                    <label for="player1Input">Player X:</label>
+                    <input type="text" id="player1Input" value="Player 1" />
+                </div>
+                <div class="input-group">
+                    <label for="player2Input">Player O:</label>
+                    <input type="text" id="player2Input" value="Computer" />
+                </div>
+            </section>
+
+            <!-- Scoreboard -->
+            <section class="scoreboard">
+                <div class="score-card">
+                    <span id="player1NameDisplay">Player 1 (X)</span>
+                    <span id="player1Score" class="score">0</span>
+                </div>
+                <div class="score-card">
+                    <span id="player2NameDisplay">Computer (O)</span>
+                    <span id="player2Score" class="score">0</span>
+                </div>
+            </section>
+
+            <!-- Game Status Bar -->
+            <div id="statusMessage" class="status-message">Player 1's Turn (X)</div>
+
+            <!-- Game Board Grid -->
+            <div id="game-board">
+                <div data-cell-index="0" class="game-cell"></div>
+                <div data-cell-index="1" class="game-cell"></div>
+                <div data-cell-index="2" class="game-cell"></div>
+                <div data-cell-index="3" class="game-cell"></div>
+                <div data-cell-index="4" class="game-cell"></div>
+                <div data-cell-index="5" class="game-cell"></div>
+                <div data-cell-index="6" class="game-cell"></div>
+                <div data-cell-index="7" class="game-cell"></div>
+                <div data-cell-index="8" class="game-cell"></div>
+            </div>
+
+            <!-- Game Control Buttons -->
+            <div class="controls">
+                <button id="game-restart-button" class="btn control-btn">Next Round</button>
+                <button id="game-reset-button" class="btn control-btn">Change Settings</button>
+            </div>
+        </div>
+
+        <script src="tictactoe.js"></script>
+    </body>
+</html>
